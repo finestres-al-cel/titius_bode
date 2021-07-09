@@ -110,10 +110,10 @@ while (file != "end"):
     yticks2 = ax2.yaxis.get_major_ticks()
     yticks2[0].label1.set_visible(False)
     yticks2[-1].label1.set_visible(False)
-    # save figure using the provided name and with extension .eps
-    fig.savefig("{}.eps".format(result_file))
+    # save figure using the provided name and with extension .png
+    fig.savefig("{}.png".format(result_file))
 
-    # save results using the provided name and with extension .eps
+    # save results using the provided name and with extension .res
     save = open(result_file+".res", "w")
     save.write("# Fit parameters (log(a-a_{0}) = log(p) + order * log(q) )\n")
     save.write("log(p) = " + str(w[1]) + "\n")
