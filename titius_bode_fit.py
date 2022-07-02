@@ -13,7 +13,6 @@ from matplotlib.ticker import MultipleLocator
 import string
 
 from math import log10
-np.set_printoptions(precision=1)
 
 # this is so that input can autocomplete using the tab
 def complete(text, state):
