@@ -44,9 +44,9 @@ while (file != "end"):
     # fit log_(dist-dist_0) = log_p + order * log_q
     data = np.array([np.log10(dist-read_data["dist"][0]) for dist in read_data["dist"][1:len(read_data["dist"])]])
     order = np.array(read_data["ordre"][1:len(read_data["ordre"])])
-    A = np.array([ order, np.ones(order.size)])
+    A = np.array([order, np.ones(order.size)])
     # obtaining the parameters
-    w = np.linalg.lstsq(A.T,data, rcond=None)[0]
+    w = np.linalg.lstsq(A.T, data)[0]
 
     # define a function to plot the resulting fit
     def predicted(x, w):
